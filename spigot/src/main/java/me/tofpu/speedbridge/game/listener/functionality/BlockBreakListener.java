@@ -38,9 +38,9 @@ public class BlockBreakListener implements Listener {
 
         // if the player is breaking a block that they've not placed themselves
         if (!locations.contains(blockLocation)) {
-            event.setCancelled(true);
+            event.setCancelled(false);
            // player.chat("Your text");
-            player.sendMessage("&casdasd asdads ");
+            player.sendMessage("§e§lBRIDGE §8» §fYou can't do this.");
             return;
         }
 
