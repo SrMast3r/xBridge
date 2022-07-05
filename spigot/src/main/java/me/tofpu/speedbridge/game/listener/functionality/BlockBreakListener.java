@@ -10,11 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.List;
 
@@ -43,8 +38,8 @@ public class BlockBreakListener implements Listener {
 
         // if the player is breaking a block that they've not placed themselves
         if (!locations.contains(blockLocation)) {
-            event.setCancelled(true);
-            P.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lHey"));
+            event.setCancelled(false);
+            player.chat("Your text");
             return;
         }
 
