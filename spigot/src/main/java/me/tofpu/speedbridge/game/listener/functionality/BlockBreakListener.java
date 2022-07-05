@@ -38,6 +38,7 @@ public class BlockBreakListener implements Listener {
 
         // if the player is breaking a block that they've not placed themselves
         if (!locations.contains(blockLocation)) {
+            sender.sendMessage(Util.colorize("test"));
             event.setCancelled(false);
             return;
         }
