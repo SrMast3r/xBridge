@@ -7,7 +7,6 @@ import me.tofpu.speedbridge.game.process.type.GameItemProcessor;
 import me.tofpu.speedbridge.util.XMaterial;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.Optional;
 
@@ -18,6 +17,7 @@ public class JoinItemProcessor extends GameItemProcessor {
         final Inventory inventory = player.getInventory();
         // clearing this user inventory
         inventory.clear();
+        player.sendMessage("§e§linventario eliminado xd");
 
         // if the process type is not process, we're done here
         if (type != ProcessType.PROCESS) return;
@@ -28,10 +28,10 @@ public class JoinItemProcessor extends GameItemProcessor {
         // if the material is present
         if (material.isPresent()){
             // parsing the material chosen
-            inventory.addItem(new ItemStack(material.get().parseMaterial(), 64));
+            player.sendMessage("§e§lPrueba");
         } else {
             // default material
-            inventory.addItem(new ItemStack(XMaterial.WHITE_WOOL.parseMaterial(), 64));
+            player.sendMessage("§e§lPrueba2");
         }
     }
 }
