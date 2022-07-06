@@ -17,7 +17,6 @@ public class JoinItemProcessor extends GameItemProcessor {
         final Inventory inventory = player.getInventory();
         // clearing this user inventory
         inventory.clear();
-        player.sendMessage("§e§linventario eliminado xd");
 
         // if the process type is not process, we're done here
         if (type != ProcessType.PROCESS) return;
@@ -28,10 +27,8 @@ public class JoinItemProcessor extends GameItemProcessor {
         // if the material is present
         if (material.isPresent()){
             // parsing the material chosen
-            player.sendMessage("§e§lPrueba");
         } else {
             // default material
-            player.sendMessage("§e§lPrueba2");
         }
     }
 }

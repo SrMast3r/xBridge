@@ -10,7 +10,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class GameRunnable implements Runnable {
@@ -48,6 +47,7 @@ public class GameRunnable implements Runnable {
             } else {
                 final Island island = entry.getValue();
                 player.teleport(island.location());
+                player.sendMessage("§e§lBRIDGE §8» §fPrueba Game Runnable");
             }
         }
     }
