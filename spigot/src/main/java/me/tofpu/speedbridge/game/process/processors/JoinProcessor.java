@@ -26,6 +26,8 @@ public class JoinProcessor extends GameProcessor {
                 // for availability reasons
                 island.takenBy(user);
 
+                player.sendMessage("§e§lBRIDGE §8» §fPrueba Game Runnable");
+
                 // teleporting player to the island's location
                 // MULTI-WORLD PATCH
                 player.teleport(island.location());
@@ -75,5 +77,6 @@ public class JoinProcessor extends GameProcessor {
         }
         // processing the items to this user
         Process.ITEM_JOIN.process(user, player, type);
+        player.sendMessage("§e§lBRIDGE §8» §fPrueba Game Runnable");
     }
 }

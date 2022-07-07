@@ -47,7 +47,6 @@ public class GameRunnable implements Runnable {
             } else {
                 final Island island = entry.getValue();
                 player.teleport(island.location());
-                player.sendMessage("§e§lBRIDGE §8» §fPrueba Game Runnable");
             }
         }
     }
