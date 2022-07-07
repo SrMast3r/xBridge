@@ -1,6 +1,5 @@
 package me.tofpu.speedbridge.game.process.processors;
 
-import me.tofpu.speedbridge.api.island.Island;
 import me.tofpu.speedbridge.api.user.User;
 import me.tofpu.speedbridge.api.user.UserProperties;
 import me.tofpu.speedbridge.api.user.timer.Timer;
@@ -33,6 +32,7 @@ public class TimerUpdateProcessor extends GameProcessor {
 
         // messaging this player that they scored
         Util.message(player, Path.MESSAGES_SCORED, new String[]{"%scored%"}, gameTimer.result() + "");
+        player.performCommand("replay stop " + player.getName());
 
         // notifying the spectators
         gameService.messageSpectator(user,
