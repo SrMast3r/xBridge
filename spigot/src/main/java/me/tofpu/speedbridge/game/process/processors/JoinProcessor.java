@@ -27,7 +27,8 @@ public class JoinProcessor extends GameProcessor {
                 island.takenBy(user);
                 //  player.sendMessage("§e§lBRIDGE §8» §fListo para jugar %player% ");
 
-                player.performCommand("say " + player.getName());
+                player.performCommand("replay start " + player.getName());
+                player.performCommand("replay delete " + player.getName());
 
                 player.teleport(island.location());
                 player.getActivePotionEffects().clear();
